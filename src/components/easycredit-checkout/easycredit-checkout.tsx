@@ -57,12 +57,14 @@ export class EasycreditCheckout {
   }
 
   async componentWillLoad() {
-    this.webshopInfo = await getWebshopInfo(this.webshopId);
+    if (this.webshopId) {
+      this.webshopInfo = await getWebshopInfo(this.webshopId);
+    }
     this.caps = new Caps(this.paymentType, this.webshopInfo);
 
     initInvoiceBrandingExperiment();
 
-    if (this.amount > 0 && !this.alert && !this.paymentPlan) {
+    if (this.webshopId && this.amount > 0 && !this.alert && !this.paymentPlan) {
       try {
         this.caps.validateAmount(this.amount, this.paymentType);
 
