@@ -9,6 +9,7 @@
 
 | Property       | Attribute       | Description | Type                      | Default     |
 | -------------- | --------------- | ----------- | ------------------------- | ----------- |
+| `flexprice`    | `flexprice`     |             | `boolean`                 | `false`     |
 | `paymentTypes` | `payment-types` |             | `string`                  | `undefined` |
 | `variant`      | `variant`       |             | `"default" \| "enhanced"` | `'default'` |
 

@@ -7,11 +7,12 @@
 
 ## Properties
 
-| Property | Attribute | Description | Type      | Default                                 |
-| -------- | --------- | ----------- | --------- | --------------------------------------- |
-| `href`   | `href`    |             | `string`  | `'https://www.easycredit.de/ratenkauf'` |
-| `isOpen` | `is-open` |             | `boolean` | `false`                                 |
-| `src`    | `src`     |             | `string`  | `undefined`                             |
+| Property    | Attribute   | Description | Type      | Default                                 |
+| ----------- | ----------- | ----------- | --------- | --------------------------------------- |
+| `flexprice` | `flexprice` |             | `boolean` | `false`                                 |
+| `href`      | `href`      |             | `string`  | `'https://www.easycredit.de/ratenkauf'` |
+| `isOpen`    | `is-open`   |             | `boolean` | `false`                                 |
+| `src`       | `src`       |             | `string`  | `undefined`                             |
 
 
 ## Methods

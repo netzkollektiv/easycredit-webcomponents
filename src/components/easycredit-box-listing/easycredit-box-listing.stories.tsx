@@ -16,12 +16,20 @@ export default {
     },
     href: {
       description: 'target URL for the "Mehr erfahren" link (defaults to https://www.easycredit.de/ratenkauf)'
+    },
+    flexprice: {
+      description: 'Zinsflex campaign: the cost notice says costs may arise instead of costs do arise',
+      table: {
+        category: 'optional',
+        defaultValue: { summary: 'false' }
+      }
     }
   }
 }
 
 let args = {
-    src: ''
+    src: '',
+    flexprice: false
 }
 
 const Template = (args) => `<easycredit-box-listing ${buildAttributes(args).join(' ')} />`;

@@ -10,6 +10,7 @@
 | Property    | Attribute    | Description | Type      | Default                                 |
 | ----------- | ------------ | ----------- | --------- | --------------------------------------- |
 | `delay`     | `delay`      |             | `number`  | `undefined`                             |
+| `flexprice` | `flexprice`  |             | `boolean` | `false`                                 |
 | `href`      | `href`       |             | `string`  | `'https://www.easycredit.de/ratenkauf'` |
 | `isOpen`    | `is-open`    |             | `boolean` | `false`                                 |
 | `snoozeFor` | `snooze-for` |             | `number`  | `undefined`                             |

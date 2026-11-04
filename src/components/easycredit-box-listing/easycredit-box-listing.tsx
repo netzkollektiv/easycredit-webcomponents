@@ -1,5 +1,6 @@
 import { Component, Method, Prop, State, h } from '@stencil/core';
 import { applyAssetsUrl, getAssetUrl } from '../../utils/utils';
+import { CostNotice } from '../../utils/cost-notice';
 
 @Component({
   tag: 'easycredit-box-listing',
@@ -11,6 +12,7 @@ export class EasycreditBoxListing {
 
   @Prop() src: string
   @Prop() href: string = 'https://www.easycredit.de/ratenkauf'
+  @Prop() flexprice: boolean = false
 
   listingElement!: HTMLElement
   descTextDefault: string = 'Der easyCredit-Ratenkauf bietet Ihnen die Möglichkeit hier im Online-Shop bequem und einfach in Raten zu zahlen. Direkt von zu Hause und ganz ohne Risiko. Denn zuerst erhalten Sie Ihre Bestellung und bezahlen später in Ihren Wunschraten.'
@@ -77,6 +79,7 @@ export class EasycreditBoxListing {
                 <div class="ec-box-listing__image-description">
                     Einfach im Bezahlvorgang easyCredit-Ratenkauf wählen.
                 </div>
+                <CostNotice flexprice={this.flexprice} />
             </div>
 
             <div class="ec-box-listing__content">

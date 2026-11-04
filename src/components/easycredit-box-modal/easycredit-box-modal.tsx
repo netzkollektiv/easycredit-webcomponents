@@ -1,5 +1,6 @@
 import { Component, Method, Prop, h } from '@stencil/core';
 import { applyAssetsUrl, getAssetUrl } from '../../utils/utils';
+import { CostNotice } from '../../utils/cost-notice';
 
 @Component({
   tag: 'easycredit-box-modal',
@@ -11,6 +12,7 @@ export class EasycreditBoxModal {
 
   @Prop({mutable: true}) src: string
   @Prop() href: string = 'https://www.easycredit.de/ratenkauf'
+  @Prop() flexprice: boolean = false
   @Prop({mutable: true}) snoozeFor: number
   @Prop({mutable: true}) delay: number
   @Prop({mutable: true}) isOpen: boolean = false
@@ -76,6 +78,7 @@ export class EasycreditBoxModal {
             <div class="ec-box-modal__content-description">
               Einfach im Bezahlvorgang easyCredit-Ratenkauf und Wunschrate wählen.
             </div>
+            <CostNotice flexprice={this.flexprice} />
 
             <div class="ec-box-modal__content-button">
                 <a class="btn btn-primary" href={this.href} target="_blank">Mehr erfahren</a>

@@ -1,3 +1,5 @@
+@import '../../globals/cost-notice';
+
 .ec-box-modal {
     display: none;
 
@@ -122,9 +124,12 @@
         font-weight: bold;
     }
     &__content-description {
-        margin-bottom: 15px;
+        margin-bottom: 10px;
         font-size: $font-size-sm;
         line-height: $line-height;
+    }
+    &__content .ec-cost-notice {
+        margin-bottom: 16px;
     }
     &__content-button {
         margin-bottom: 30px;

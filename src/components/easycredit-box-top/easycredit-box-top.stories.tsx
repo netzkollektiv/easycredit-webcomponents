@@ -10,10 +10,19 @@ export default {
       }
     }    
   },
-  argTypes: {},
+  argTypes: {
+    flexprice: {
+      description: 'Zinsflex campaign: the cost notice says costs may arise instead of costs do arise',
+      table: {
+        category: 'optional',
+        defaultValue: { summary: 'false' }
+      }
+    }
+  },
 };
 
 const Template = (args) =>
     `<easycredit-box-top ${buildAttributes(args).join(' ')} />`;
 export const BoxTop = Template.bind({});
 BoxTop.storyName = 'BoxTop'
+BoxTop.args = { flexprice: false }

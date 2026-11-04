@@ -1,3 +1,7 @@
+@import '../../globals/cost-notice';
+
+$ec-box-flash-peek: 84px;
+
 .ec-box-flash {
     position: fixed;
     right: 30px;
@@ -8,7 +12,7 @@
     height: auto;
     cursor: pointer;
     transition: transform .15s ease;
-    transform: translateY(100%) translateY(-44px);
+    transform: translateY(100%) translateY(-$ec-box-flash-peek);
 
     &__close,
     &__content,
@@ -63,15 +67,23 @@
     }
 
     &__preview {
-        flex: 0 0 44px;
+        flex: 0 0 $ec-box-flash-peek;
 
         display: flex;
-        flex-flow: row nowrap;
+        flex-flow: row wrap;
         align-items: center;
+        align-content: center;
         justify-content: center;
-        padding: 0 10px;
-        height: 44px;
+        padding: 8px 12px;
+        height: $ec-box-flash-peek;
         box-sizing: border-box;
+
+        .ec-cost-notice {
+            flex: 1 0 100%;
+            margin: 4px 0 0;
+            font-size: $font-size-sm;
+            text-align: center;
+        }
     }
     &__preview-logo {
         margin-right: 10px;
@@ -112,6 +124,9 @@
 
         font-size: $font-size-xs;
         line-height: $line-height;
+    }
+    &__content .ec-cost-notice {
+        margin-bottom: 12px;
     }
     &__content-button {
         margin-bottom: 15px;

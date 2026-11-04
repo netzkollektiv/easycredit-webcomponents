@@ -1,3 +1,5 @@
+@import '../../globals/cost-notice';
+
 .ec-box-top {
     position: absolute;
     top: 0;
@@ -5,10 +7,11 @@
     z-index: 1001;
 
     display: flex;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: stretch;
     width: 100%;
-    height: 50px;
+    height: auto;
     overflow-x: hidden;
 
     background-color: $ec-darkblue;
@@ -18,8 +21,9 @@
 
     &__slider {
         position: relative;
+        flex: 0 0 50px;
         width: 100%;
-        height: 100%;
+        height: 50px;
     }
 
     &__slide {
@@ -69,6 +73,13 @@
         position: relative;
         top: 0; 
         right: 0;
+    }
+
+    .ec-cost-notice {
+        margin: 0;
+        padding: 0 16px 8px;
+        font-size: $font-size-sm;
+        text-align: center;
     }
 }
 

@@ -27,6 +27,13 @@ export default {
       table: {
         defaultValue: { summary: `${METHODS.INSTALLMENT},${METHODS.BILL}` }
       }
+    },
+    flexprice: {
+      description: 'Zinsflex campaign: the cost notice says costs may arise instead of costs do arise. Shown only while installment purchase is selected.',
+      table: {
+        category: 'optional',
+        defaultValue: { summary: 'false' }
+      }
     }
   },
 };
@@ -43,6 +50,7 @@ const Template = (args) => {
 export const Default = Template.bind({});
 Default.storyName = 'Standard variant';
 Default.args = {
+  flexprice: false
 //  variant: 'default',
 //  paymentTypes: `${METHODS.INSTALLMENT},${METHODS.BILL}`
 };
@@ -51,7 +59,8 @@ export const Enhanced = Template.bind({});
 Enhanced.storyName = 'Enhanced variant';
 Enhanced.args = {
   variant: 'enhanced',
-  paymentTypes: `${METHODS.INSTALLMENT},${METHODS.BILL}`
+  paymentTypes: `${METHODS.INSTALLMENT},${METHODS.BILL}`,
+  flexprice: false
 };
 
 // Add specific stories for single payment type scenarios
@@ -59,12 +68,14 @@ export const InstallmentOnly = Template.bind({});
 InstallmentOnly.storyName = 'Installment only';
 InstallmentOnly.args = {
   variant: 'enhanced',
-  paymentTypes: METHODS.INSTALLMENT
+  paymentTypes: METHODS.INSTALLMENT,
+  flexprice: false
 };
 
 export const BillOnly = Template.bind({});
 BillOnly.storyName = 'Bill only';
 BillOnly.args = {
   variant: 'enhanced',
-  paymentTypes: METHODS.BILL
+  paymentTypes: METHODS.BILL,
+  flexprice: false
 };

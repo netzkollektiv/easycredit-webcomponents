@@ -25,6 +25,13 @@ export default {
     },
     snoozeFor: {
       description: 'after this time, the modal will be displayed again when the page is loaded if the user has already closed it (in seconds), only in conjunction with openDelay'
+    },
+    flexprice: {
+      description: 'Zinsflex campaign: the cost notice says costs may arise instead of costs do arise',
+      table: {
+        category: 'optional',
+        defaultValue: { summary: 'false' }
+      }
     }
   },
 };
@@ -33,7 +40,8 @@ let args = {
     src: '',
     delay: '',
     snoozeFor: '',
-    isOpen: false
+    isOpen: false,
+    flexprice: false
 }
 
 const Template = (args) => {

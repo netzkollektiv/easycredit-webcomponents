@@ -1,5 +1,6 @@
-import { Component, State, h } from '@stencil/core';
+import { Component, Prop, State, h } from '@stencil/core';
 import { applyAssetsUrl } from '../../utils/utils';
+import { CostNotice } from '../../utils/cost-notice';
 
 @Component({
   tag: 'easycredit-box-top',
@@ -8,6 +9,8 @@ import { applyAssetsUrl } from '../../utils/utils';
 })
 
 export class EasycreditBoxTop {
+
+  @Prop() flexprice: boolean = false
 
   @State() slideIndex = 0
   @State() isScrolled = false
@@ -51,6 +54,7 @@ export class EasycreditBoxTop {
                 </div>
             </div>
         </div>
+        <CostNotice flexprice={this.flexprice} />
       </div>
     ])
   }

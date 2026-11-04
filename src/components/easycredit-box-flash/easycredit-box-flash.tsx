@@ -1,5 +1,6 @@
 import { Component, Method, Prop, h } from '@stencil/core';
 import { applyAssetsUrl, getAssetUrl, sendFeedback } from '../../utils/utils';
+import { CostNotice } from '../../utils/cost-notice';
 
 @Component({
   tag: 'easycredit-box-flash',
@@ -11,6 +12,7 @@ export class EasycreditBoxFlash {
 
   @Prop() src: string
   @Prop() href: string = 'https://www.easycredit.de/ratenkauf'
+  @Prop() flexprice: boolean = false
   @Prop() isOpen: boolean = false
 
   @Method() async toggle () {
@@ -41,6 +43,7 @@ export class EasycreditBoxFlash {
                 <div class="ec-box-flash__preview-heading">
                     Ganz entspannt <span>in Raten zahlen</span>.
                 </div>
+                <CostNotice flexprice={this.flexprice} />
             </div>
 
             <div class="ec-box-flash__content">
@@ -50,6 +53,7 @@ export class EasycreditBoxFlash {
                 <div class="ec-box-flash__content-description">
                     Der easyCredit-Ratenkauf bietet Ihnen die Möglichkeit hier im Online-Shop bequem und einfach in Raten zu zahlen. Direkt von zu Hause und ganz ohne Risiko. Denn zuerst erhalten Sie Ihre Bestellung und bezahlen später in Ihren Wunschraten. 
                 </div>
+                <CostNotice flexprice={this.flexprice} />
                 <div class="ec-box-flash__content-button">
                   <a class="btn btn-primary" href={this.href} target="_blank">Mehr erfahren</a>
                 </div>
