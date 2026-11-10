@@ -1,8 +1,7 @@
 @import '../../globals/cost-notice';
 
-$ec-box-flash-peek: 84px;
-
 .ec-box-flash {
+    container-type: inline-size;
     position: fixed;
     right: 30px;
     bottom: 0;
@@ -12,7 +11,7 @@ $ec-box-flash-peek: 84px;
     height: auto;
     cursor: pointer;
     transition: transform .15s ease;
-    transform: translateY(100%) translateY(-$ec-box-flash-peek);
+    transform: translateY(100%) translateY(-44px);
 
     &__close,
     &__content,
@@ -67,23 +66,15 @@ $ec-box-flash-peek: 84px;
     }
 
     &__preview {
-        flex: 0 0 $ec-box-flash-peek;
+        flex: 0 0 44px;
 
         display: flex;
-        flex-flow: row wrap;
+        flex-flow: row nowrap;
         align-items: center;
-        align-content: center;
         justify-content: center;
-        padding: 8px 12px;
-        height: $ec-box-flash-peek;
+        padding: 0 10px;
+        height: 44px;
         box-sizing: border-box;
-
-        .ec-cost-notice {
-            flex: 1 0 100%;
-            margin: 4px 0 0;
-            font-size: $font-size-sm;
-            text-align: center;
-        }
     }
     &__preview-logo {
         margin-right: 10px;
@@ -125,9 +116,6 @@ $ec-box-flash-peek: 84px;
         font-size: $font-size-xs;
         line-height: $line-height;
     }
-    &__content .ec-cost-notice {
-        margin-bottom: 12px;
-    }
     &__content-button {
         margin-bottom: 15px;
     }
@@ -164,10 +152,26 @@ $ec-box-flash-peek: 84px;
             background-color: $overlay-darken;
         }
     }
+    .ec-cost-notice {
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 2;
+        margin: 0;
+        padding: 8px 8px;
+        background-color: $white;
+        color: $font-color;
+        font-size: 4.2cqw;
+        line-height: 1.2;
+        font-weight: 400;
+        text-align: center;
+        white-space: nowrap;
+    }
     &__image-logo {
         position: absolute;
         right: 25px;
-        bottom: 20px;
+        bottom: 48px;
         z-index: 1;
 
         @extend .logo-ratenkauf-white;

@@ -2,7 +2,7 @@ import { Component, Prop, h, State, Element } from '@stencil/core';
 import { sendFeedback } from '../../utils/utils'
 import { applyAssetsUrl } from '../../utils/utils';
 import { METHODS } from '../../types';
-import { CostNotice } from '../../utils/cost-notice';
+import { CostNotice, billCostNotice } from '../../utils/cost-notice';
 
 @Component({
   tag: 'easycredit-infopage',
@@ -177,9 +177,6 @@ export class EasycreditInfopage {
 
             <section class="ec-infopage__text">
               {this.getIntroFragment()}
-              {this.selectedPaymentType === METHODS.INSTALLMENT && (
-                <CostNotice flexprice={this.flexprice} />
-              )}
 
               <div class="actions">
                 <a
@@ -193,6 +190,12 @@ export class EasycreditInfopage {
                   this.scrollToSection('faq');
                 }}>Häufige Fragen (FAQ)</a>
               </div>
+              {this.selectedPaymentType === METHODS.INSTALLMENT && (
+                <CostNotice flexprice={this.flexprice} />
+              )}
+              {this.selectedPaymentType === METHODS.BILL && (
+                <CostNotice text={billCostNotice()} />
+              )}
             </section>
 
             {this.variant === 'enhanced' && (

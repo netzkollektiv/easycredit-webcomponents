@@ -128,15 +128,19 @@
         font-size: $font-size-sm;
         line-height: $line-height;
     }
-    &__content .ec-cost-notice {
-        margin-bottom: 16px;
-    }
     &__content-button {
         margin-bottom: 30px;
     }
     &__content-logo-finanzgruppe {
         @extend .logo-finanzgruppe;
         margin-left: auto;
+    }
+    &__content .ec-cost-notice {
+        margin: 16px 0 0;
+        font-size: $font-size-xs;
+        line-height: $line-height;
+        font-weight: 400;
+        color: $font-color;
     }
 
     .ec__circle-badge {

@@ -78,13 +78,13 @@ export class EasycreditBoxModal {
             <div class="ec-box-modal__content-description">
               Einfach im Bezahlvorgang easyCredit-Ratenkauf und Wunschrate wählen.
             </div>
-            <CostNotice flexprice={this.flexprice} />
 
             <div class="ec-box-modal__content-button">
                 <a class="btn btn-primary" href={this.href} target="_blank">Mehr erfahren</a>
             </div>
 
             <div class="ec-box-modal__content-logo-finanzgruppe"></div>
+            <CostNotice flexprice={this.flexprice} />
           </div>
         </div>
 

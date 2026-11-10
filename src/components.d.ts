@@ -94,10 +94,6 @@ export namespace Components {
         "toggle": () => Promise<void>;
     }
     interface EasycreditBoxTop {
-        /**
-          * @default false
-         */
-        "flexprice": boolean;
     }
     interface EasycreditCheckout {
         "alert": string;
@@ -558,10 +554,6 @@ declare namespace LocalJSX {
         "src"?: string;
     }
     interface EasycreditBoxTop {
-        /**
-          * @default false
-         */
-        "flexprice"?: boolean;
     }
     interface EasycreditCheckout {
         "alert"?: string;
@@ -751,9 +743,6 @@ declare namespace LocalJSX {
         "delay": number;
         "isOpen": boolean;
     }
-    interface EasycreditBoxTopAttributes {
-        "flexprice": boolean;
-    }
     interface EasycreditCheckoutAttributes {
         "isActive": boolean;
         "amount": number;
@@ -839,7 +828,7 @@ declare namespace LocalJSX {
         "easycredit-box-flash": Omit<EasycreditBoxFlash, keyof EasycreditBoxFlashAttributes> & { [K in keyof EasycreditBoxFlash & keyof EasycreditBoxFlashAttributes]?: EasycreditBoxFlash[K] } & { [K in keyof EasycreditBoxFlash & keyof EasycreditBoxFlashAttributes as `attr:${K}`]?: EasycreditBoxFlashAttributes[K] } & { [K in keyof EasycreditBoxFlash & keyof EasycreditBoxFlashAttributes as `prop:${K}`]?: EasycreditBoxFlash[K] };
         "easycredit-box-listing": Omit<EasycreditBoxListing, keyof EasycreditBoxListingAttributes> & { [K in keyof EasycreditBoxListing & keyof EasycreditBoxListingAttributes]?: EasycreditBoxListing[K] } & { [K in keyof EasycreditBoxListing & keyof EasycreditBoxListingAttributes as `attr:${K}`]?: EasycreditBoxListingAttributes[K] } & { [K in keyof EasycreditBoxListing & keyof EasycreditBoxListingAttributes as `prop:${K}`]?: EasycreditBoxListing[K] };
         "easycredit-box-modal": Omit<EasycreditBoxModal, keyof EasycreditBoxModalAttributes> & { [K in keyof EasycreditBoxModal & keyof EasycreditBoxModalAttributes]?: EasycreditBoxModal[K] } & { [K in keyof EasycreditBoxModal & keyof EasycreditBoxModalAttributes as `attr:${K}`]?: EasycreditBoxModalAttributes[K] } & { [K in keyof EasycreditBoxModal & keyof EasycreditBoxModalAttributes as `prop:${K}`]?: EasycreditBoxModal[K] };
-        "easycredit-box-top": Omit<EasycreditBoxTop, keyof EasycreditBoxTopAttributes> & { [K in keyof EasycreditBoxTop & keyof EasycreditBoxTopAttributes]?: EasycreditBoxTop[K] } & { [K in keyof EasycreditBoxTop & keyof EasycreditBoxTopAttributes as `attr:${K}`]?: EasycreditBoxTopAttributes[K] } & { [K in keyof EasycreditBoxTop & keyof EasycreditBoxTopAttributes as `prop:${K}`]?: EasycreditBoxTop[K] };
+        "easycredit-box-top": EasycreditBoxTop;
         "easycredit-checkout": Omit<EasycreditCheckout, keyof EasycreditCheckoutAttributes> & { [K in keyof EasycreditCheckout & keyof EasycreditCheckoutAttributes]?: EasycreditCheckout[K] } & { [K in keyof EasycreditCheckout & keyof EasycreditCheckoutAttributes as `attr:${K}`]?: EasycreditCheckoutAttributes[K] } & { [K in keyof EasycreditCheckout & keyof EasycreditCheckoutAttributes as `prop:${K}`]?: EasycreditCheckout[K] };
         "easycredit-checkout-bill-payment-timeline": EasycreditCheckoutBillPaymentTimeline;
         "easycredit-checkout-installments": Omit<EasycreditCheckoutInstallments, keyof EasycreditCheckoutInstallmentsAttributes> & { [K in keyof EasycreditCheckoutInstallments & keyof EasycreditCheckoutInstallmentsAttributes]?: EasycreditCheckoutInstallments[K] } & { [K in keyof EasycreditCheckoutInstallments & keyof EasycreditCheckoutInstallmentsAttributes as `attr:${K}`]?: EasycreditCheckoutInstallmentsAttributes[K] } & { [K in keyof EasycreditCheckoutInstallments & keyof EasycreditCheckoutInstallmentsAttributes as `prop:${K}`]?: EasycreditCheckoutInstallments[K] };
